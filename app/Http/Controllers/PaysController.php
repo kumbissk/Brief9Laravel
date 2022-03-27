@@ -16,7 +16,6 @@ class PaysController extends Controller
     {
         //
         $pays = Pays::all();
-
         return view('pays.index',[
             'Pays' => $pays
         ]);

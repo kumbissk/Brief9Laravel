@@ -9,5 +9,5 @@ class Pays extends Model
 {
     use HasFactory;
 
-    protected $fillabe = ['nom', 'indicatif'];
+    protected $fillabe = ['nom','indicatif'];
 }
