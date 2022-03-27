@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PaysController;
+use App\Models\Pays;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $pays = Pays::all();
+    return view('welcome', [
+        'pays' => $pays
+    ]);
 });
+
+
+Route::get('/pays',[PaysController::class, 'index']);
